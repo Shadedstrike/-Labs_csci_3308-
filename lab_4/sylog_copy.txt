@@ -463,3 +463,100 @@ Sep 23 14:28:26 april-dell systemd[1299]: This usually indicates unclean termina
 Sep 23 14:28:26 april-dell systemd[1299]: Starting GNOME Terminal Server...
 Sep 23 14:28:26 april-dell dbus-daemon[1696]: [session uid=1000 pid=1696] Successfully activated service 'org.gnome.Terminal'
 Sep 23 14:28:26 april-dell systemd[1299]: Started GNOME Terminal Server.
+Sep 23 14:30:22 april-dell sSMTP[22718]: Creating SSL connection to host
+Sep 23 14:30:22 april-dell sSMTP[22718]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:30:24 april-dell sSMTP[22718]: Sent mail for april@april-dell (221 2.0.0 closing connection d63sm176778oig.53 - gsmtp) uid=1000 username=april outbytes=739
+Sep 23 14:31:16 april-dell rtkit-daemon[2891]: Supervising 4 threads of 2 processes of 1 users.
+Sep 23 14:34:24 april-dell rtkit-daemon[2891]: message repeated 5 times: [ Supervising 4 threads of 2 processes of 1 users.]
+Sep 23 14:35:01 april-dell CRON[22919]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Sep 23 14:39:15 april-dell crontab[22977]: (april) BEGIN EDIT (april)
+Sep 23 14:39:49 april-dell discord.desktop[10567]: [Modules] Checking for host updates.
+Sep 23 14:39:49 april-dell discord.desktop[10567]: [Modules] Host is up to date.
+Sep 23 14:39:49 april-dell discord.desktop[10567]: [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+Sep 23 14:39:49 april-dell discord.desktop[10567]: [Modules] No module updates available.
+Sep 23 14:41:35 april-dell crontab[22977]: (april) END EDIT (april)
+Sep 23 14:42:16 april-dell crontab[23044]: (april) BEGIN EDIT (april)
+Sep 23 14:42:52 april-dell crontab[23044]: (april) REPLACE (april)
+Sep 23 14:42:52 april-dell crontab[23044]: (april) END EDIT (april)
+Sep 23 14:43:01 april-dell CRON[23076]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:43:01 april-dell sSMTP[23081]: Creating SSL connection to host
+Sep 23 14:43:01 april-dell sSMTP[23081]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:43:03 april-dell sSMTP[23081]: Sent mail for root@april-dell (221 2.0.0 closing connection l79sm185973oih.41 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:43:09 april-dell rtkit-daemon[2891]: Supervising 4 threads of 2 processes of 1 users.
+Sep 23 14:43:09 april-dell rtkit-daemon[2891]: message repeated 3 times: [ Supervising 4 threads of 2 processes of 1 users.]
+Sep 23 14:43:09 april-dell rtkit-daemon[2891]: Successfully made thread 23103 of process 22870 (n/a) owned by '1000' RT at priority 10.
+Sep 23 14:43:09 april-dell rtkit-daemon[2891]: Supervising 5 threads of 3 processes of 1 users.
+Sep 23 14:44:01 april-dell CRON[23221]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:44:01 april-dell sSMTP[23226]: Creating SSL connection to host
+Sep 23 14:44:01 april-dell sSMTP[23226]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:44:04 april-dell sSMTP[23226]: Sent mail for root@april-dell (221 2.0.0 closing connection q24sm187202oij.19 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:45:01 april-dell CRON[23238]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:45:01 april-dell CRON[23237]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Sep 23 14:45:01 april-dell sSMTP[23244]: Creating SSL connection to host
+Sep 23 14:45:01 april-dell sSMTP[23244]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:45:03 april-dell sSMTP[23244]: Sent mail for root@april-dell (221 2.0.0 closing connection a6sm278032otf.51 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:46:01 april-dell CRON[23273]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:46:01 april-dell sSMTP[23278]: Creating SSL connection to host
+Sep 23 14:46:01 april-dell sSMTP[23278]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:46:03 april-dell sSMTP[23278]: Sent mail for root@april-dell (221 2.0.0 closing connection y24sm232165ooq.38 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:47:01 april-dell CRON[23292]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:47:01 april-dell sSMTP[23297]: Creating SSL connection to host
+Sep 23 14:47:02 april-dell sSMTP[23297]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:47:04 april-dell sSMTP[23297]: Sent mail for root@april-dell (221 2.0.0 closing connection a4sm195142oif.3 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:48:01 april-dell CRON[23308]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:48:01 april-dell sSMTP[23313]: Creating SSL connection to host
+Sep 23 14:48:01 april-dell sSMTP[23313]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:48:03 april-dell sSMTP[23313]: Sent mail for root@april-dell (221 2.0.0 closing connection m20sm238120oof.23 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:48:47 april-dell gnome-shell[2749]: NOTE: Not using GLX TFP!
+Sep 23 14:49:01 april-dell CRON[23345]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:49:01 april-dell sSMTP[23350]: Creating SSL connection to host
+Sep 23 14:49:01 april-dell sSMTP[23350]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:49:03 april-dell sSMTP[23350]: Sent mail for root@april-dell (221 2.0.0 closing connection d17sm277077oth.73 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:49:16 april-dell gnome-shell[2749]: NOTE: Not using GLX TFP!
+Sep 23 14:49:44 april-dell gnome-shell[2749]: message repeated 2 times: [ NOTE: Not using GLX TFP!]
+Sep 23 14:50:01 april-dell CRON[23380]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:50:02 april-dell sSMTP[23385]: Creating SSL connection to host
+Sep 23 14:50:02 april-dell sSMTP[23385]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:50:04 april-dell sSMTP[23385]: Sent mail for root@april-dell (221 2.0.0 closing connection a6sm281321otf.51 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:50:52 april-dell rtkit-daemon[2891]: Supervising 5 threads of 3 processes of 1 users.
+Sep 23 14:50:52 april-dell rtkit-daemon[2891]: message repeated 3 times: [ Supervising 5 threads of 3 processes of 1 users.]
+Sep 23 14:50:52 april-dell rtkit-daemon[2891]: Successfully made thread 23485 of process 21624 (n/a) owned by '1000' RT at priority 10.
+Sep 23 14:50:52 april-dell rtkit-daemon[2891]: Supervising 6 threads of 4 processes of 1 users.
+Sep 23 14:51:01 april-dell CRON[23499]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:51:01 april-dell sSMTP[23504]: Creating SSL connection to host
+Sep 23 14:51:01 april-dell sSMTP[23504]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:51:03 april-dell sSMTP[23504]: Sent mail for root@april-dell (221 2.0.0 closing connection k13sm237932ood.31 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:52:01 april-dell CRON[23517]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:52:01 april-dell sSMTP[23522]: Creating SSL connection to host
+Sep 23 14:52:02 april-dell sSMTP[23522]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:52:04 april-dell sSMTP[23522]: Sent mail for root@april-dell (221 2.0.0 closing connection j10sm202705oif.36 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:53:01 april-dell CRON[23572]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:53:01 april-dell sSMTP[23577]: Creating SSL connection to host
+Sep 23 14:53:01 april-dell sSMTP[23577]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:53:03 april-dell sSMTP[23577]: Sent mail for root@april-dell (221 2.0.0 closing connection i5sm293118otj.19 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:54:01 april-dell CRON[23619]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:54:01 april-dell sSMTP[23624]: Creating SSL connection to host
+Sep 23 14:54:01 april-dell sSMTP[23624]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:54:03 april-dell sSMTP[23624]: Sent mail for root@april-dell (221 2.0.0 closing connection l25sm295441otb.4 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:55:01 april-dell CRON[23633]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Sep 23 14:55:01 april-dell CRON[23634]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:55:01 april-dell sSMTP[23640]: Creating SSL connection to host
+Sep 23 14:55:02 april-dell sSMTP[23640]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:55:04 april-dell sSMTP[23640]: Sent mail for root@april-dell (221 2.0.0 closing connection l79sm193029oih.41 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:55:11 april-dell gnome-shell[2749]: [AppIndicatorSupport-FATAL] unable to lookup icon for Signal1_31
+Sep 23 14:55:11 april-dell gnome-shell[2749]: [AppIndicatorSupport-FATAL] unable to lookup icon for Signal1_31
+Sep 23 14:55:27 april-dell rtkit-daemon[2891]: Supervising 6 threads of 4 processes of 1 users.
+Sep 23 14:55:27 april-dell rtkit-daemon[2891]: message repeated 3 times: [ Supervising 6 threads of 4 processes of 1 users.]
+Sep 23 14:55:27 april-dell rtkit-daemon[2891]: Successfully made thread 23735 of process 22375 (n/a) owned by '1000' RT at priority 10.
+Sep 23 14:55:27 april-dell rtkit-daemon[2891]: Supervising 7 threads of 5 processes of 1 users.
+Sep 23 14:55:50 april-dell org.gnome.Shell.desktop[2749]: ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+Sep 23 14:55:50 april-dell org.gnome.Shell.desktop[2749]: message repeated 78 times: [ ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost]
+Sep 23 14:56:01 april-dell CRON[23824]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:56:01 april-dell sSMTP[23829]: Creating SSL connection to host
+Sep 23 14:56:01 april-dell sSMTP[23829]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:56:01 april-dell gnome-shell[2749]: [AppIndicatorSupport-FATAL] unable to lookup icon for discord1_14
+Sep 23 14:56:01 april-dell gnome-shell[2749]: [AppIndicatorSupport-FATAL] unable to lookup icon for discord1_14
+Sep 23 14:56:03 april-dell sSMTP[23829]: Sent mail for root@april-dell (221 2.0.0 closing connection d63sm191946oig.53 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:56:07 april-dell Main[23847]: Failed to load module "canberra-gtk-module"
+Sep 23 14:56:51 april-dell crontab[23881]: (april) BEGIN EDIT (april)
+Sep 23 14:57:01 april-dell CRON[23895]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)

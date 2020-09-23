@@ -1,3 +1,5 @@
 email subject\n\n
 Sep 23 08:26:40 april-dell systemd-resolved[895]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
 Sep 23 08:26:40 april-dell systemd-resolved[895]: message repeated 6 times: [ Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.]
+Sep 23 14:55:50 april-dell org.gnome.Shell.desktop[2749]: ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+Sep 23 14:55:50 april-dell org.gnome.Shell.desktop[2749]: message repeated 78 times: [ ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost]
