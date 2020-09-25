@@ -10,5 +10,5 @@ Lab 1:
 
 Lab 4:
 
-Lab 5: I constructed a small demo website utilizing html and css. 
+Lab 5: I worked on building a small demo website utilizing html and css. 
        Bootstrap classes was also used to add functionality to the site.
