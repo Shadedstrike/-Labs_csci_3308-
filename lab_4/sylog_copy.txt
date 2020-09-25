@@ -560,3 +560,20 @@ Sep 23 14:56:03 april-dell sSMTP[23829]: Sent mail for root@april-dell (221 2.0.
 Sep 23 14:56:07 april-dell Main[23847]: Failed to load module "canberra-gtk-module"
 Sep 23 14:56:51 april-dell crontab[23881]: (april) BEGIN EDIT (april)
 Sep 23 14:57:01 april-dell CRON[23895]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
+Sep 23 14:57:01 april-dell sSMTP[23900]: Creating SSL connection to host
+Sep 23 14:57:02 april-dell sSMTP[23900]: SSL connection using ECDHE_ECDSA_CHACHA20_POLY1305
+Sep 23 14:57:04 april-dell sSMTP[23900]: Sent mail for root@april-dell (221 2.0.0 closing connection y25sm289500oti.26 - gsmtp) uid=1000 username=april outbytes=728
+Sep 23 14:57:23 april-dell discord.desktop[23913]: Discord 0.0.12
+Sep 23 14:57:23 april-dell discord.desktop[23913]: Starting app.
+Sep 23 14:57:23 april-dell discord.desktop[23913]: Starting updater.
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Modules initializing
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Distribution: remote
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Host updates: enabled
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Module updates: enabled
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Module install path: /home/april/.config/discord/0.0.12/modules
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Module installed file path: /home/april/.config/discord/0.0.12/modules/installed.json
+Sep 23 14:57:23 april-dell discord.desktop[23913]: [Modules] Module download path: /home/april/.config/discord/0.0.12/modules/pending
+Sep 23 14:57:24 april-dell gnome-shell[2749]: [AppIndicatorSupport-FATAL] unable to lookup icon for discord1_15
+Sep 23 14:57:25 april-dell gnome-shell[2749]: [AppIndicatorSupport-FATAL] unable to lookup icon for discord1_15
+Sep 23 14:57:31 april-dell crontab[23881]: (april) END EDIT (april)
+Sep 23 14:58:01 april-dell CRON[23987]: (april) CMD (/home/april/CSCI3308_dev/Labs_csci_3308/lab_4/lab4_script.sh)
