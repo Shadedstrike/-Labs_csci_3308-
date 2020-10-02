@@ -12,7 +12,34 @@
 	<link href="../resources/css/my_style.css" rel="stylesheet">
   </head>
   <body>
-	
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="home.html">
+      <img class="rounded-circle" src="../resources/img/cu_boulder_logo.jpg" alt="" width="30" height="30">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="team_stats.html">Season Stats </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="player_info.html">Player Information</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="register.html">Register</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+      </div>
+      </div>
+    </nav>
+
 	<img src="../resources/img/beproudcapaabanner.jpg" class="img-fluid" alt="Registration Page Banner for CU Football">
     <br>
 	<br>
@@ -31,9 +58,108 @@
 					9. Undergraduate Select (Freshman-Senior)
 					10. Graduate Select (MA, MBA, PhD)
 					11. Submit Button (links to home page)
-
 			-->
-			<input type="submit" value="submit" class="btn btn-primary btn-block">
+
+      <form>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="inputName">Full Name</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name">
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group ">
+      <label for="inputEmail">Email address</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email">
+    </div>
+    </div>
+
+  <div class="form-row">
+    <div class="form-group ">
+
+    <label for="inputPassword">Password</label>
+    <input type="text" class="form-control" id="inputPassword" placeholder="Password">
+  </div>
+  <div class="form-row">
+    <div class="form-group ">
+      <label for="inputPassword2">Confirm Password</label>
+      <input type="text" class="form-control" id="inputPassword2" placeholder="confirm password">
+    </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+
+    <div class="form-check">
+      <label for="basic-url">CU Boulder Alumni?</label>
+      <div class="form-group">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Yes</label>
+    <div class="form-group">
+
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">No</label>
+  </div>
+</div>
+</div>
+
+
+   <div class="form-check">
+      <label for="basic-url">CU Boulder Student?</label>
+      <div class="form-group">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Yes</label>
+    <div class="form-group">
+
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">No</label>
+  </div>
+<label for="basic-url">Student Status:</label>
+
+<div class="form-row">
+
+  <div class="form-group">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Undergrad</label>
+<div class="form-group">
+</div>
+</div>
+
+<div class="form-group col-md-4">
+      <select id="inputState" class="form-control">
+        <option selected>Select student status...</option>
+        <option>Fresh</option>
+        <option>Soph</option>
+        <option>Junior</option>
+        <option>Senior</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="form-row">
+
+  <div class="form-group">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Grad</label>
+<div class="form-group">
+</div>
+</div>
+
+<div class="form-group col-md-4">
+      <select id="inputState" class="form-control">
+        <option selected>Select student status...</option>
+        <option>Fresh</option>
+        <option>Soph</option>
+        <option>Junior</option>
+        <option>Senior</option>
+      </select>
+    </div>
+  </div>
+</div>
+</form>
+
+
+			<input type="submit" value="submit" class="btn btn-primary btn-block" href="home.html">
 		</form>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
