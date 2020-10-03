@@ -2,6 +2,8 @@
 #student_status{
 	visibility:hidden;
 	height:0px;
+	display:grid;
+	grid-row-gap:4px;
 }
 
 #undergrad_select{

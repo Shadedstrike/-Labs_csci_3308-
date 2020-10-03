@@ -54,6 +54,28 @@ function viewStudentStats(id,toggle)
 	}
 }
 
+function isButtonChecked(id)
+{
+    //returns a boolean true or false
+    return !!$(`${id}:checked`).val()
+}
+
+function onLoad()
+{
+	console.log(isButtonChecked("studentStatusYes"))
+
+	viewStudentStats('undergrad_select', 0)
+	const button1 = document.getElementById("studentStatusYes")
+	console.log(button1)
+
+
+
+//	button1.value = "No"
+
+	//document.getElementById("studentStatusNo").value = "No"
+
+
+}
 
 /*
 	Home Page:
@@ -128,3 +150,4 @@ function changeColor(color)
 					  avg_r_yards   - the average number of rushing yards for the player's Buff career
 					  avg_rec_yards - the average number of receiving yards for the player's Buff career
 */
+onLoad()
