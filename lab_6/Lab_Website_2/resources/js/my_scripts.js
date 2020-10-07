@@ -126,24 +126,24 @@ function showStatus(id) {
 
 function viewStudentStats(id,toggle)
 {
-	console.log(id, toggle)
+	console.log(id, toggle);
 	if(toggle == 1)
 	{
-		showStatus(id)
+		showStatus(id);
 	}
 	if(toggle == 0)
 	{
-		hideStatus(id)
+		hideStatus(id);
 	}
 
-	onStatusChange(id)
+	onStatusChange(id);
 }
 
 
 function onLoad()
 {
 	const statuses = Object.values(STATUS);
-	loadStatsPage()
+
 	checkStatuses(statuses);
 }
 
@@ -158,7 +158,7 @@ function onLoad()
 */
 function changeColor(color)
 {
-	console.log(color)
+	console.log(color);
 	document.body.style.background = color;
 }
 /*
@@ -179,26 +179,37 @@ function changeColor(color)
 */
 function loadStatsPage()
 {
-	var winTotal = 0
-	var lossTotal = 0
+	var winTotal = 0;
+	var lossTotal = 0;
 
 	//stats_table
 	var table = document.getElementById("stats_table");
 	var row_counter;
-	var col_counter;
-	var cell_value;
 
-	for(row_counter = 0; row_counter < table.rows.length; row_counter++)
+	for(row_counter = 2; row_counter < table.rows.length; row_counter++)
 		{//Outer for loop iterates over each row
-			for(col_counter = 0; col_counter < table.rows[row_counter].cells.length; col_counter++)
+			var row = table.rows[row_counter];
+			var homeScore = row.cells[2].innerHTML; //extract the data to compare it
+			var oppScore = row.cells[3].innerHTML;
+
+		//do the compare!
+			if(homeScore>oppScore) //win case
 			{
-				cell_value = table.rows[row_counter].cells[col_counter].innerHTML;//Read in a cells current value
-				cell_value = parseInt(cell_value) + 2;//Increase the cell's value by 2
-				table.rows[row_counter].cells[col_counter].innerHTML = cell_value;//Update the actual html of the cell
+				row.cells[4].innerHTML += "CU Boulder"; //add the text
+				winTotal +=1;
 			}
+			else //loss
+			{
+				row.cells[4].innerHTML += row.cells[1].innerHTML;
+				lossTotal +=1;
+			}
+
+			var total_wins = document.getElementById("wins");
+			var total_losses = document.getElementById("losses");
+
+			total_wins.innerHTML = winTotal; //update the bottom with the overalls
+		total_losses.innerHTML = lossTotal; //
 		}
-
-
 }
 
 /*
@@ -296,27 +307,27 @@ function switchPlayers(playerNum)
 function isButtonChecked(id)
 {
     //returns a boolean true or false if this button id is checked
-    return !!$(`#${id}:checked`).val();;
+    return !!$(`#${id}:checked`).val();
 }
 
 function checkStatus(statusId)
 {
 	//returns a boolean true or false if this status i.e 'student_status' is checked / checked true
 	try {
-		return isButtonChecked(INPUTS[statusId].YES)
+		return isButtonChecked(INPUTS[statusId].YES);
 	} catch (e) {
-		console.log(`YES input was not found for #${statusId} `)
-		return false
+		console.log(`YES input was not found for #${statusId} `);
+		return false;
 	}
 }
 
 function checkStatuses(statuses)
 {
 	statuses.forEach((statusId) => {
-		onStatusChange(statusId)
+		onStatusChange(statusId);
 	});
 
-	console.log('\n')
+	console.log('\n');
 }
 
 
@@ -331,11 +342,11 @@ function onStatusChange(statusId)
 	} else {
 		//Code for status input being No or False or Unchecked goes here
 		console.log(`Status for #${statusId} is false!`)
-		hideStatus(statusId)
+		hideStatus(statusId);
 	}
 
-	console.log('\n')
+	console.log('\n');
 }
 
 
-onLoad()
+onLoad();
