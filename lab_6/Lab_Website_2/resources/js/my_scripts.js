@@ -21,6 +21,74 @@ var players = [{name:"John Doe", img: "../resources/img/player1.jpg", alt:"Image
 				{name:"Robert Myers", img: "../resources/img/player4.jpg", alt:"Image of Player 4", year:"Senior", major:"Computer Science", games_played: 31, pass_yards: 802, rushing_yards: 375, receiving_yards: 128}];
 
 
+
+//declare constants
+const PLAYER_STATS = {
+	YEAR: {
+		id: "p_year",
+		key: 'year'
+	},
+	MAJOR: {
+		id: "p_major",
+		key: "major"
+	},
+	GAMES_PLAYED: {
+		id: "g_played",
+		key: "games_played"
+	},
+	PASSING_YARDS: {
+		id: "p_yards",
+		key: "pass_yards"
+	},
+	AVG_PASSING_YARDS: {
+		id: "avg_p_yards",
+		key: "avg_pass_yards"
+	},
+	RUSHING_YARDS: {
+		id: "r_yards",
+		key: "rushing_yards"
+	},
+	AVG_RUSHING_YARDS: {
+		id: "avg_r_yards",
+		key: "avg_rushing_yards"
+	},
+	RECEIVING_YARDS: {
+		id: "rec_yards",
+		key: "receiving_yards"
+	},
+	AVG_RECEIVING_YARDS: {
+		id: "avg_rec_yards",
+		key: "avg_receiving_yards"
+	},
+	IMAGE: {
+		id: "player_img",
+		key: "img"
+	}
+};
+
+const INPUTS = {
+	student_status: {
+		YES: "studentStatusYes",
+		NO: "studentStatusNo",
+	},
+	alumni_status: {
+		YES: "alumniStatusYes",
+		NO: "alumniStatusNo"
+	},
+	undergrad_select: {
+		YES: "undergrad"
+	},
+	grad_select: {
+		YES: "graduate"
+	}
+};
+
+const STATUS = {
+	STUDENT: "student_status",
+	ALUMNI: "alumni_status",
+	UNDERGRAD: "undergrad_select",
+	GRAD: "grad_select"
+};
 /*
 	Registration Page:
 		viewStudentStats(id, toggle) method
@@ -38,43 +106,45 @@ var players = [{name:"John Doe", img: "../resources/img/player1.jpg", alt:"Image
 					 the height will be set to auto.
 */
 
+function hideStatus(id) {
+	const statusElement = document.getElementById(id);
+
+	if(statusElement) {
+		statusElement.style.visibility = "hidden";
+		statusElement.style.height = "0px";
+	}
+}
+
+function showStatus(id) {
+	const statusElement = document.getElementById(id);
+
+	if (statusElement) {
+		statusElement.style.visibility = "visible";
+		statusElement.style.height = "auto";
+	}
+}
+
 function viewStudentStats(id,toggle)
 {
 	console.log(id, toggle)
 	if(toggle == 1)
 	{
-		document.getElementById(id).style.visibility = "visible";
-		document.getElementById(id).style.height = "auto";
+		showStatus(id)
 	}
 	if(toggle == 0)
 	{
-		document.getElementById(id).style.visibility = "hidden";
-		document.getElementById(id).style.height = "0px";
-
+		hideStatus(id)
 	}
+
+	onStatusChange(id)
 }
 
-function isButtonChecked(id)
-{
-    //returns a boolean true or false
-    return !!$(`${id}:checked`).val()
-}
 
 function onLoad()
 {
-	console.log(isButtonChecked("studentStatusYes"))
-
-	viewStudentStats('undergrad_select', 0)
-	const button1 = document.getElementById("studentStatusYes")
-	console.log(button1)
-
-
-
-//	button1.value = "No"
-
-	//document.getElementById("studentStatusNo").value = "No"
-
-
+	const statuses = Object.values(STATUS);
+	loadStatsPage()
+	checkStatuses(statuses);
 }
 
 /*
@@ -89,7 +159,7 @@ function onLoad()
 function changeColor(color)
 {
 	console.log(color)
-	document.body.style.background = "color";
+	document.body.style.background = color;
 }
 /*
 	Football Season Stats Page:
@@ -107,6 +177,29 @@ function changeColor(color)
 
 						4. Update the second table to show the total number of wins/losses for the Buffs.
 */
+function loadStatsPage()
+{
+	var winTotal = 0
+	var lossTotal = 0
+
+	//stats_table
+	var table = document.getElementById("stats_table");
+	var row_counter;
+	var col_counter;
+	var cell_value;
+
+	for(row_counter = 0; row_counter < table.rows.length; row_counter++)
+		{//Outer for loop iterates over each row
+			for(col_counter = 0; col_counter < table.rows[row_counter].cells.length; col_counter++)
+			{
+				cell_value = table.rows[row_counter].cells[col_counter].innerHTML;//Read in a cells current value
+				cell_value = parseInt(cell_value) + 2;//Increase the cell's value by 2
+				table.rows[row_counter].cells[col_counter].innerHTML = cell_value;//Update the actual html of the cell
+			}
+		}
+
+
+}
 
 /*
 	Football Player Information Page
@@ -150,4 +243,99 @@ function changeColor(color)
 					  avg_r_yards   - the average number of rushing yards for the player's Buff career
 					  avg_rec_yards - the average number of receiving yards for the player's Buff career
 */
+function addPlayerToDropdown(player, selector){
+	const {name, img, alt, year, major, games_played, pass_yards, rushing_yards, receiving_yards} = player;
+	const playerOption = document.createElement('a');
+
+	playerOption.href = "#";
+	playerOption.onclick =  () => {
+		switchPlayers(players.indexOf(player))
+	},
+	playerOption.innerHTML = name;
+	playerOption.style.display = 'block';
+
+	selector.appendChild(playerOption)
+}
+
+function loadPlayersPage()
+{
+	const playerSelectorId = "player_selector";
+	const playerSelectorElement = document.getElementById(playerSelectorId);
+
+	players.forEach((player)=>{
+		addPlayerToDropdown(player, playerSelectorElement)
+	})
+}
+
+function switchPlayers(playerNum)
+{
+	const player = players[playerNum];
+	const stats = Object.values(PLAYER_STATS);
+
+	// will make an array of the players stat's  { element id + object key }
+	// i.e  [{id: g_played, key: games_played}, ]
+
+	player['avg_receiving_yards'] = (player[PLAYER_STATS.RECEIVING_YARDS.key] / player[PLAYER_STATS.GAMES_PLAYED.key]).toFixed(2);
+
+	player['avg_pass_yards'] = (player[PLAYER_STATS.PASSING_YARDS.key] / player[PLAYER_STATS.GAMES_PLAYED.key]).toFixed(2);
+
+	player['avg_rushing_yards'] =(player[PLAYER_STATS.RUSHING_YARDS.key] / player[PLAYER_STATS.GAMES_PLAYED.key]).toFixed(2);
+
+	stats.forEach(({id, key}) => {
+		const statElement = document.getElementById(id);
+		statElement.innerHTML = player[key];
+	})
+
+	const playerImgElement = document.getElementById(PLAYER_STATS.IMAGE.id);
+	playerImgElement.src = player[PLAYER_STATS.IMAGE.key];
+
+}
+
+
+//***My Helper Functions***
+function isButtonChecked(id)
+{
+    //returns a boolean true or false if this button id is checked
+    return !!$(`#${id}:checked`).val();;
+}
+
+function checkStatus(statusId)
+{
+	//returns a boolean true or false if this status i.e 'student_status' is checked / checked true
+	try {
+		return isButtonChecked(INPUTS[statusId].YES)
+	} catch (e) {
+		console.log(`YES input was not found for #${statusId} `)
+		return false
+	}
+}
+
+function checkStatuses(statuses)
+{
+	statuses.forEach((statusId) => {
+		onStatusChange(statusId)
+	});
+
+	console.log('\n')
+}
+
+
+function onStatusChange(statusId)
+{
+	const statusIsTrue = checkStatus(statusId);
+
+	if (statusIsTrue) {
+		//Code for status input being Yes or True or Checked goes here
+		console.log(`Status for #${statusId} is true!`)
+		showStatus(statusId)
+	} else {
+		//Code for status input being No or False or Unchecked goes here
+		console.log(`Status for #${statusId} is false!`)
+		hideStatus(statusId)
+	}
+
+	console.log('\n')
+}
+
+
 onLoad()
