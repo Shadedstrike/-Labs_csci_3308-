@@ -3,8 +3,8 @@
 	<div class="container">
 		<br>
 		<div class="jumbotron">
-		  <h1 class="display-4">Fall 2018 Stats</h1>
-		  <p class="lead">Detailed information on how the Buffs are doing in the 2018 Football Season!</p>
+		  <h1 class="display-4">Fall 2097 Stats</h1>
+		  <p class="lead">Detailed information on how the Buffs are doing in the 2097 Football Season!</p>
 		</div>
 		
 		<table class="table table-bordered" id="stats_table">
@@ -18,6 +18,23 @@
 				<th>Home Score</th>
 				<th>Opp. Score</th>
 			</tr>
+			<%
+			if (all) {
+			var rows = '';
+							all.forEach(function(item){
+								const {visitor_name, game_date, home_score, visitor_score} = item;
+								const homeWin = home_score > visitor_score;
+						   rows += `<tr>
+							   <td>${new Date(game_date).toLocaleDateString()}</td>
+								<td>${visitor_name}</td>
+								<td class="${homeWin ? 'win' : 'loss'}">${home_score}</td>
+								<td class="${!homeWin ? 'win' : 'loss'}">${visitor_score}</td>
+								<!--   if homeWin is true, write CU Boulder, else write visitor_name   -->
+								<td >${homeWin ? 'CU Boulder':visitor_name}</td>
+							</tr>`;
+				   }); %>
+			   <%- rows %>
+			 <% } %>
 			<!-- TODO: Iterate over the Football_table data here 
 						1. Display the information for each row (date, name, home score, visitor score)
 						2. Determine who the winner is and display it in the final column
@@ -35,9 +52,9 @@
 				<th>Losses</th>
 			</tr>
 			<tr>
-				<td> <!-- TODO: Display the total number of wins here.  
+				<td><%- wins[0].count %> <!-- TODO: Display the total number of wins here.  
 							    This value should come from your server.js files query, don't calculate it in this file! --></td>
-				<td> <!-- TODO: Display the total number of losses here.  
+				<td><%- losses[0].count  %> <!-- TODO: Display the total number of losses here.  
 							    This value should come from your server.js files query, don't calculate it in this file! --></td>
 			</tr>
 		</table>

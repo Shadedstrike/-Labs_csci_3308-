@@ -1,15 +1,23 @@
 /* Add any css you want to use for you website here */
-#student_status{
-	visibility:hidden;
-	height:0px;
+#student_status {
+  visibility: hidden;
+  height: 0px;
 }
 
-#undergrad_select{
-	visibility:hidden;
-	height:0px;
+#undergrad_select {
+  visibility: hidden;
+  height: 0px;
 }
 
-#grad_select{
-	visibility:hidden;
-	height:0px;
+#grad_select {
+  visibility: hidden;
+  height: 0px;
+}
+
+.win {
+  background-color: #bada55;
+}
+
+.loss {
+  background-color: #ec6e6e;
 }
