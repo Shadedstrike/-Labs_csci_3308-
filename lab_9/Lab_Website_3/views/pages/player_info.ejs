@@ -6,17 +6,22 @@
 			<div class="col-4">
 				<div class="card">
 				<!-- TODO: Modify the ejs code below, to conditionally set the image_src to be from our chosen player -->
-				  <% 
+				  <%
 				  var image_src = '../resources/img/helmet.jpg';
 				  if(player){
 					image_src = player.img_src;
 				  }
-				  
+
 				  %>
 				 <img class="card-img-top" id="player_img" src= "<%- image_src %>" alt="Image of Football Player">
 				  <div class="card-body mx-auto">
 					<form class="form"action="/player_info/post" method="get">
 						<select class="custom-select" name="player_choice" onchange="this.form.submit()">
+
+							<!-- TODO: Populate our select with player options
+						 			For each player, set a new option with a value matching the palyer's id,
+						 			 but will display the player's name-->
+
 							 <option <%- !player && 'selected' %>>Select Player</option>
 							 <%
 							 if (players) {
@@ -27,13 +32,8 @@
 							}); %>
 							<%- options %>
 							<% } %>
-							 <!-- TODO: Populate our select with player options
-							 			For each player, set a new option with a value matching the palyer's id, 
-										 but will display the player's name-->
 
-										 
-										 
-										 
+
 						</select>
 					</form>
 				  </div>
@@ -43,6 +43,19 @@
 				<div class="table-responsive">
 					<% if(typeof player === 'object'){ %>
 					<table class="table">
+
+						<%
+
+					var avg_passing_yards = '';
+					var avg_rushing_yards = '';
+					var avg_receiving_yards = '';
+
+				//	if(typeof player === 'object') {
+				//		avg_passing_yards = (player.passing_yards/player.games_played).toFixed(0);
+				//		avg_rushing_yards = (player.rushing_yards/player.games_played).toFixed(0);
+				//		avg_receiving_yards = (selected_player.receiving_yards/selected_player.games_played).toFixed(0);
+				//	}
+				//	%>
 						<tr>
 							<!-- TODO: Set Player Information
 							 			If a player has been selected, fill in their information in each of the fields below.
@@ -76,5 +89,5 @@
 			</div>
 		</div>
 	</div>
-  
+
 <%- include('../partials/footer') %>

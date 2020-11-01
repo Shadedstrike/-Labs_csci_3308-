@@ -166,6 +166,8 @@ app.get('/home/pick_color', function(req, res) {
 
 app.get('/team_stats', function(req, res) {
 
+  //load the sql queries, then feed them to the db to do the tasks
+
 	var fall_games = `SELECT * FROM football_games WHERE game_date >= '2020-08-01'::DATE AND game_date <='2021-02-07'::DATE ORDER BY game_date;`;
 	var fall_wins = `SELECT COUNT(*) FROM football_games WHERE home_score > visitor_score AND game_date >= '2020-08-01'::DATE AND game_date <='2021-02-07'::DATE;`;
 	var fall_losses = `SELECT COUNT(*) FROM football_games WHERE home_score < visitor_score AND game_date >= '2020-08-01'::DATE AND game_date <='2021-02-07'::DATE;`;
@@ -226,10 +228,10 @@ app.get('/player_info', function(req, res) {
       my_title: 'Player info',
       player: false,
       players: [{'id':0,'name':'error'}],
-      
+
     })
   });
-  
+
 });
 
 
@@ -239,11 +241,12 @@ app.get('/player_info/post', function(req, res) {
   let id = req.query.player_choice;
   var select_players = `SELECT id,name FROM football_players;`;
   if(Number.isNaN(Number(id))){
-    id = 0 
-  }
+    id = 0
+  } //catch empty player case
+
   var select_player = `SELECT * FROM football_players WHERE id = ${Number(id)} LIMIT 1`;
   var select_games = `SELECT COUNT(*) FROM football_games WHERE ${Number(id)} = ANY (players);`;
-  var select_averages = `SELECT AVG(passing_yards) AS passing, AVG(rushing_yards) AS rushing, AVG(receiving_yards) AS receiving FROM football_players;`;
+  var select_averages = `SELECT AVG(passing_yards) AS passing, AVG(rushing_yards) AS rushing, AVG(receiving_yards) AS receiving FROM football_players WHERE id = ${Number(id)} LIMIT 1;`;
 	db.task('get-football-players', task => {
     return task.batch([
       task.any(select_players , req.query),
@@ -254,14 +257,15 @@ app.get('/player_info/post', function(req, res) {
   })
   .then(info => {
       var [players, player, games, averages] = info;
-      console.log(player, info);
+
+      console.log("averages: ", averages);
       if(player.length === 0) player = false;
       else player = player[0]
     	res.render('pages/player_info',{
         my_title: "player info",
         players,
         player,
-        games: games[0].count, 
+        games: games[0].count, //pass game count and other info to the html
         averages: averages[0]
 			})
     }).catch(err => {
