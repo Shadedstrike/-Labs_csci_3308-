@@ -167,7 +167,7 @@ $(document).ready(function() {
 //        console.log(data.forecast);//View Today's Temp
 
 
-    //    new Date = 
+    //    new Date =
 
         var temp_hi = key.maxtemp;
         temp_hi = getFarenheitTemp(temp_hi);   //dont forget to convert it into F
@@ -195,9 +195,5 @@ $(document).ready(function() {
         html += "</div>";
         fore.innerHTML += html;
    }
-
-
-
-
   })
 });
