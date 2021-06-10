@@ -1,5 +1,5 @@
 # -Labs_csci_3308-
-This is April Ott's repository for the laboratory section of CSCI 3308 at CU Boulder, Software Development.
+This is April Ott's repository for the laboratory section of CSCI 3308 (Software development) at CU Boulder, Software Development.
 
 Fall semester, 2020.
 
